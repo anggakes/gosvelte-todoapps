@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: gosvelte
+    networks:
+    - gosvelte
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+    - '5432:5432'
+
+networks:
+  gosvelte:

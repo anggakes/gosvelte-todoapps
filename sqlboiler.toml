@@ -1,0 +1,14 @@
+output   = "src/backend/dbmodels"
+pkgname  = "dbmodels"
+
+[psql]
+  dbname = "gosvelte"
+  host   = "localhost"
+  port   = 5432
+  user   = "user"
+  pass   = "password"
+  sslmode = "disable"
+  schema = "public"
+  blacklist = [
+      "django_migrations",
+  ]
